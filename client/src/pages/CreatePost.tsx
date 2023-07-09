@@ -28,7 +28,7 @@ const CreatePost = () => {
       setLoading(true);
 
       try {
-        await fetch("http://localhost:8080/api/v1/post", {
+        await fetch("https://van-gan.onrender.com/api/v1/post", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -57,7 +57,7 @@ const CreatePost = () => {
     if (form.prompt) {
       setGeneratingImg(true);
       try {
-        const res = await fetch(`http://localhost:8080/api/v1/dalle`, {
+        const res = await fetch(`https://van-gan.onrender.com/api/v1/dalle`, {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
