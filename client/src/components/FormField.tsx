@@ -1,5 +1,3 @@
-import React from "react";
-
 type FormFieldProps = {
   labelName: string;
   type: string;

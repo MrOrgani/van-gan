@@ -1,6 +1,4 @@
-import React from "react";
-
-import { download } from "../assets";
+import download from "../assets/download.png";
 import { downloadImage } from "../utils";
 
 export type CardType = {
