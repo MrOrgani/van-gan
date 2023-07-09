@@ -21,14 +21,14 @@ const CreatePost = () => {
 
   const [loading, setLoading] = useState(false);
 
-  const handleSubmit = void (async (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
     if (form.prompt && form.photo) {
       setLoading(true);
 
       try {
-        await fetch("https://van-gan.onrender.com/api/v1/post", {
+        const res = await fetch("https://van-gan.onrender.com/api/v1/post", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -36,7 +36,9 @@ const CreatePost = () => {
           body: JSON.stringify(form),
         });
 
-        return navigate("/");
+        if (res.ok) {
+          navigate("/");
+        }
       } catch (err) {
         console.log(err);
       } finally {
@@ -45,7 +47,7 @@ const CreatePost = () => {
     } else {
       alert("Enter a prompt");
     }
-  });
+  };
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setForm({ ...form, [e.target.name]: e.target.value });
   };

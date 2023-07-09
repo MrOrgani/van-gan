@@ -68,7 +68,7 @@ const Home = () => {
   };
 
   useEffect(() => {
-    void fetchPosts();
+    fetchPosts();
   }, []);
 
   return (
