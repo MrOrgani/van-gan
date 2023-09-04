@@ -68,7 +68,7 @@ const Home = () => {
   };
 
   useEffect(() => {
-    fetchPosts();
+    void fetchPosts();
   }, []);
 
   return (
@@ -81,7 +81,7 @@ const Home = () => {
       </div>
       <div className="mt-16">
         <FormField
-          labelName="searchPost"
+          labelName="Looking for a post..."
           type="text"
           name="text"
           placeholder="Search posts"

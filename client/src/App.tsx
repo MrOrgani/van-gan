@@ -1,4 +1,5 @@
 import logo from "./assets/logo.svg";
+import vanGanLogo from "./assets/vanGanLogo.svg";
 import "./App.css";
 
 import { Home, CreatePost } from "./pages";
@@ -9,7 +10,11 @@ function App() {
     <BrowserRouter>
       <header className="w-full flex justify-between items-center bg-white sm:px-8 px-4 py-4 border-blue-500">
         <Link to="/">
-          <img src={logo} alt={"logo"} className="w-28 object-contain" />
+          <div className="flex items-end justify-center">
+            <img src={vanGanLogo} alt={"logo"} className="w-40" />
+            <span className="text-xs mx-1">with</span>
+            <img src={logo} alt={"logo"} className="w-20 object-contain" />
+          </div>
         </Link>
         <Link
           to="/create-post"
