@@ -76,7 +76,7 @@ const Home = () => {
       <div>
         <h1 className="font-extrabold text-black text-3xl">Gallery</h1>
         <p className="mt-2 text-gray-500 text-lg max-w-[500px]">
-          Have a look at all previous create from DALL-E
+          Have a look at all previous creations from DALL-E
         </p>
       </div>
       <div className="mt-16">
